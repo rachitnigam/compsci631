@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="next" href="Typeinf.Explicit.html">
+<link rel="Up" href="Typeinf.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Typeinf" rel="Chapter" href="Typeinf.html"><title>Typeinf.Implicit</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="Typeinf.html" title="Typeinf">Up</a>
+&nbsp;<a class="post" href="Typeinf.Explicit.html" title="Typeinf.Explicit">Next</a>
+</div>
+<h1>Module <a href="type_Typeinf.Implicit.html">Typeinf.Implicit</a></h1>
+
+<pre><span class="keyword">module</span> Implicit: <code class="code">sig</code> <a href="Typeinf.Implicit.html">..</a> <code class="code">end</code></pre><div class="info module top">
+The abstract syntax of the implicitly-typed syntax and a parser.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEexp"><span class="keyword">type</span> <code class="type"></code>exp</span> = <code class="type">Typeinf_syntax.Implicit.exp</code> = </pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Const"><span class="constructor">Const</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.html#TYPEconst">Typeinf.const</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Op2"><span class="constructor">Op2</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.html#TYPEop2">Typeinf.op2</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.If"><span class="constructor">If</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.Implicit.html#TYPEexp">exp</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Id"><span class="constructor">Id</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.html#TYPEid">Typeinf.id</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Let"><span class="constructor">Let</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.html#TYPEid">Typeinf.id</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Fun"><span class="constructor">Fun</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.html#TYPEid">Typeinf.id</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Fix"><span class="constructor">Fix</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.html#TYPEid">Typeinf.id</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.App"><span class="constructor">App</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.Implicit.html#TYPEexp">exp</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Empty"><span class="constructor">Empty</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Cons"><span class="constructor">Cons</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.Implicit.html#TYPEexp">exp</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Head"><span class="constructor">Head</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Tail"><span class="constructor">Tail</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.IsEmpty"><span class="constructor">IsEmpty</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.Pair"><span class="constructor">Pair</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.Implicit.html#TYPEexp">exp</a> * <a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.ProjL"><span class="constructor">ProjL</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTexp.ProjR"><span class="constructor">ProjR</span></span> <span class="keyword">of</span> <code class="type"><a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="VALfrom_file"><span class="keyword">val</span> from_file</span> : <code class="type">string -> <a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></pre>
+<pre><span id="VALfrom_string"><span class="keyword">val</span> from_string</span> : <code class="type">string -> <a href="Typeinf.Implicit.html#TYPEexp">exp</a></code></pre></body></html>

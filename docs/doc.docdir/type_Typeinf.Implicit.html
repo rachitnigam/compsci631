@@ -1,0 +1,33 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Typeinf" rel="Chapter" href="Typeinf.html"><title>Typeinf.Implicit</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;exp&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Typeinf_syntax</span>.<span class="constructor">Implicit</span>.exp&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Const</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.const<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Op2</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.op2&nbsp;*&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp&nbsp;*&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">If</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp&nbsp;*&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Id</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Let</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.id&nbsp;*&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp&nbsp;*&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Fun</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.id&nbsp;*&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Fix</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.id&nbsp;*&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">App</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp&nbsp;*&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Empty</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Cons</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp&nbsp;*&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Head</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Tail</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">IsEmpty</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Pair</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp&nbsp;*&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">ProjL</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">ProjR</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;from_file&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;from_string&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Typeinf</span>.<span class="constructor">Implicit</span>.exp<br>
+<span class="keyword">end</span></code></body></html>
