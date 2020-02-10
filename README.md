@@ -10,38 +10,38 @@ and Linux.
 - Install [OPAM](https://opam.ocaml.org/doc/Install.html). I recommend
   following the directions under *Using your distribution's package
   system* instead of using the generic installation script.
-  
+
 - Check the version of OCaml installed by running:
 
   ```
   ocaml -version
   ```
-  
+
   You should have version 4.06.1 installed (4.07 will not work). If the wrong version is
   installed, run the following command:
-  
+
   ```
   opam switch 4.06.1
   ```
 
   Follow any on-screen directions that the command provides. In particular, you will probably
   need to run:
-  
+
   ```
   eval `opam config env`
   ```
-  
+
   followed by:
-  
+
   ```
   opam update
   ```
-  
+
 
 - To install the support code for this class, run:
 
   ```
-  opam pin add compsci631 https://github.com/plasma-umass/compsci631.git
+  opam pin add compsci631 https://github.com/rachitnigam/compsci631.git
   opam install compsci631
   ```
 
