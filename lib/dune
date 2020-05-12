@@ -1,0 +1,7 @@
+(menhir
+  (modules Imp_parser javaScript_parser))
+(ocamllex
+  (modules Imp_lexer javaScript_lexer))
+(library
+ (name compsci631)
+ (libraries mparser))

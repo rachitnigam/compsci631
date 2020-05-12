@@ -1,0 +1,12 @@
+# OASIS_START
+# DO NOT EDIT (digest: e7e71e92e6eef12919357c26d53fa75d)
+version = "2.0.22"
+description = "Software for Programming Languages (COMPSCI631)"
+requires = "mparser mparser.re ppx_deriving.std ppx_test"
+archive(byte) = "compsci631.cma"
+archive(byte, plugin) = "compsci631.cma"
+archive(native) = "compsci631.cmxa"
+archive(native, plugin) = "compsci631.cmxs"
+exists_if = "compsci631.cma"
+# OASIS_STOP
+

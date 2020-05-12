@@ -1,0 +1,4 @@
+(executable
+ (public_name compsci631)
+ (name main)
+ (libraries compsci631))
